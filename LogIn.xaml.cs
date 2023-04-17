@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,46 @@ namespace FinalProjectApp
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void login(object sender, RoutedEventArgs e)
+        {
+
+            string dbsCon = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=FinalProjectDataSet; Integrated Security=True";
+            SqlConnection sqlCon = new SqlConnection(dbsCon);
+
+            try
+            {                
+                sqlCon.Open();
+                string q = "SELECT * FROM Teachers WHERE email=@val1 AND password=PASSWORD(@val2)";
+                SqlCommand cmd = new SqlCommand(q, sqlCon);
+                cmd.Parameters.AddWithValue("@val1", email.Text);
+                cmd.Parameters.AddWithValue("@val2", pass.Password);
+
+                //string query = $"select [Username], [Password] from Teachers where [email]={email.Text} and [Password]={pass.Password}";
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlCon.Close();
+                TeacherHome th = new TeacherHome();
+                th.Show();
+                Close();
+            }
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void ToSignUp(object sender, RoutedEventArgs e)
         {
 
         }
