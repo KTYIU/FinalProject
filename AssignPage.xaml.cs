@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,21 +19,49 @@ namespace FinalProjectApp
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class SignUpInst : Window
+    public partial class AssignPage : Window
     {
-        public SignUpInst()
+        public AssignPage()
         {
             InitializeComponent();
         }
+        
+        private void Cancel(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string dbsCon = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=FinalProjectDataSet; Integrated Security=True";
+            SqlConnection sqlCon = new SqlConnection(dbsCon);
 
-        }
+            try
+            {
+                sqlCon.Open();
+                string q = "Insert into Assignments " +
+                    " Values(@val1,@val2,@val3)";
+                SqlCommand cmd = new SqlCommand(q, sqlCon);
+                cmd.Parameters.AddWithValue("@val1", name.Text);
+                cmd.Parameters.AddWithValue("@val2", dueDater.SelectedDate);
+                cmd.Parameters.AddWithValue("@val2", cboxSubj.SelectedItem);
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
+                cmd.Prepare();
+                cmd.ExecuteNonQuery();
 
+                MessageBox.Show("Assignment created successfully.");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlCon.Close();
+                Close();
+            }
         }
     }
 }

@@ -25,9 +25,11 @@ namespace FinalProjectApp
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BToLogIn(object sender, RoutedEventArgs e)
         {
-
+            Close();
+            LogIn lg = new LogIn();
+            lg.Show();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
