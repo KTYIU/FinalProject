@@ -60,14 +60,12 @@ namespace FinalProjectApp
 
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         private void ToSignUp(object sender, RoutedEventArgs e)
         {
-
+            Close();
+            SignUp su = new SignUp();
+            su.Show();
         }
     }
 }

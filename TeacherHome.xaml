@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="AdminTeacherHome" Height="450" Width="800" Loaded="Window_Loaded_1">
     <Window.Resources>
-        <local:FinalProjectDataSet x:Key="finalProjectDataSet"/>
+        <local:FinalProjectDataSet x:Key="finalProjectDataSet"/> 
         <CollectionViewSource x:Key="assignmentsViewSource" Source="{Binding Assignments, Source={StaticResource finalProjectDataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource assignmentsViewSource}">
