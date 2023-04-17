@@ -25,8 +25,9 @@
             <ComboBoxItem Content="Physics"/>
             <ComboBoxItem Content="French"/>
         </ComboBox>
-        
-<!-- Note to self: Add ComboBox with classes later -->
+        <TextBlock HorizontalAlignment="Left" Margin="265,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="55"><Run FontSize="15" FontFamily="Segoe UI Semibold" Text="Subject"/><Run Text=":"/></TextBlock>
+
+        <!-- Note to self: Add ComboBox with classes later -->
 
 
     </Grid>
