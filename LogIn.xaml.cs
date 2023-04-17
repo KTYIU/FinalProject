@@ -26,7 +26,7 @@ namespace FinalProjectApp
             InitializeComponent();
         }
 
-        private void login(object sender, RoutedEventArgs e)
+        private void Login(object sender, RoutedEventArgs e)
         {
 
             string dbsCon = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=FinalProjectDataSet; Integrated Security=True";
