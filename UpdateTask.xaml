@@ -14,7 +14,7 @@
             <TextBlock.Effect>
                 <DropShadowEffect Color="#FFF7F1EC" Direction="299" BlurRadius="0" ShadowDepth="3"/>
             </TextBlock.Effect><Run Text="Update "/><Run Text="Assignment"/><Run Text=":"/></TextBlock>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="306,183,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="202" FontSize="15"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="31" Margin="306,183,0,0" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" Width="202" FontSize="15"/>
         <DatePicker x:Name="dueDater" HorizontalAlignment="Left" Margin="306,233,0,0" VerticalAlignment="Top" Height="35" Width="202"/>
         <ComboBox x:Name="cboxSubj" Text="Choose Subject..." HorizontalAlignment="Left" Margin="327,273,0,0" VerticalAlignment="Top" Width="161" Height="31">
             <ComboBoxItem Content="Choose Subject" IsSelected="True"/>
@@ -26,7 +26,7 @@
             <ComboBoxItem Content="French"/>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="266,279,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="55"><Run FontSize="15" FontFamily="Segoe UI Semibold" Text="Subject"/><Run Text=":"/></TextBlock>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="306,141,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="202" FontSize="15"/>
+        <TextBox x:Name="idBox" HorizontalAlignment="Left" Height="31" Margin="306,141,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="202" FontSize="15"/>
 
         <!-- Note to self: Add ComboBox with classes later -->
 

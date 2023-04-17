@@ -18,9 +18,9 @@ namespace FinalProjectApp
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class AdminTeacherHome : Window
+    public partial class TeacherHome : Window
     {
-        public AdminTeacherHome()
+        public TeacherHome()
         {
             InitializeComponent();
         }
