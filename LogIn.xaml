@@ -1,0 +1,31 @@
+﻿<Window x:Class="FinalProjectApp.LogIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProjectApp"
+        mc:Ignorable="d"
+        Title="LogIn" Height="450" Width="800">
+    <Grid>
+        <Image Source="C:\Users\katya\Downloads\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55"/>
+        <Button x:Name="logInButton" Content="Enter" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="346,330,0,0" VerticalAlignment="Top" Width="117" Height="37" Click="Button_Click" FontSize="18"/>
+        <Button x:Name="ToSignUp" Background="BlanchedAlmond" Content="Sign-up" HorizontalAlignment="Left" Margin="663,371,0,0" VerticalAlignment="Top" Width="104" Height="30" Click="Button_Click" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Center" Margin="349,102,342.333,277.667" TextWrapping="Wrap" Text="Log-In" VerticalAlignment="Center" Height="41" Width="102" FontSize="27" FontWeight="Bold" FontFamily="Palatino Linotype" TextAlignment="Center">
+            <TextBlock.Effect>
+                <DropShadowEffect Color="#FFDCCDC1" Direction="299" BlurRadius="0" ShadowDepth="3"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="84" Width="773" TextAlignment="Center" FontWeight="Bold" FontFamily="MV Boli" FontSize="28" LineHeight="40" LineStackingStrategy="BlockLineHeight"><Run Text="Welcome to "/><Run Text="OPA "/><Run Text="- our Online "/><Run Text="Platform for Assignments"/><Run Text="!"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Height="32" Margin="308,191,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="195" FontSize="15" FontFamily="Sitka Small"/>
+        <PasswordBox x:Name="pass"   HorizontalAlignment="Left"  Margin="308,261,0,0" VerticalAlignment="Top" Height="32" Width="195"/>
+        <TextBlock HorizontalAlignment="Left" Margin="308,242,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Height="27" Width="82" FontSize="15" FontFamily="Sitka Small">
+            <TextBlock.Effect>
+                <DropShadowEffect BlurRadius="2" ShadowDepth="2
+                                  " Color="#FFF1EDE8"/>
+            </TextBlock.Effect>
+        </TextBlock>
+
+
+
+    </Grid>
+</Window>
