@@ -83,13 +83,18 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="UpdateTask.xaml.cs">
-      <DependentUpon>UpdateTask.xaml</DependentUpon>
-    </Compile>
     <Compile Include="FinalProjectDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FinalProjectDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalProjectDataSetDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalProjectDataSetDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTask.xaml.cs">
+      <DependentUpon>UpdateTask.xaml</DependentUpon>
     </Compile>
     <Compile Include="TeacherHome.xaml.cs">
       <DependentUpon>TeacherHome.xaml</DependentUpon>
@@ -136,6 +141,17 @@
     </None>
     <None Include="FinalProjectDataSet.xss">
       <DependentUpon>FinalProjectDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FinalProjectDataSetDataSet.xsc">
+      <DependentUpon>FinalProjectDataSetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FinalProjectDataSetDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalProjectDataSetDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalProjectDataSetDataSet.xss">
+      <DependentUpon>FinalProjectDataSetDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

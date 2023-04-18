@@ -35,22 +35,7 @@
         <Button x:Name="DeleteB" Content="Delete Assignment" Background="AliceBlue" HorizontalAlignment="Left" Margin="609,27,0,0" VerticalAlignment="Top" Width="159" Height="37" Click="Button_Click" FontSize="18"/>
         <Button x:Name="ToIDPage" Content="Update Assignment" Background="AliceBlue" HorizontalAlignment="Left" Margin="266,27,0,0" VerticalAlignment="Top" Width="166" Height="37" Click="Button_Click" FontSize="18"/>
         <Button x:Name="ToIDPage_Copy" Content="Create Class" Background="AliceBlue" HorizontalAlignment="Left" Margin="641,353,0,0" VerticalAlignment="Top" Width="127" Height="37" Click="Button_Click" FontSize="18"/>
-        <DataGrid x:Name="assignmentsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="27,141,450,53.667" RowDetailsVisibilityMode="VisibleWhenSelected">
-            <DataGrid.Columns>
-                <DataGridTextColumn x:Name="iDColumn" Binding="{Binding id}" Header="ID" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="subjectColumn" Binding="{Binding subject}" Header="subject" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="_classColumn" Binding="{Binding class}" Header="class" Width="SizeToHeader"/>
-                <DataGridTemplateColumn x:Name="dueDateColumn" Header="due Date" Width="SizeToHeader">
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <DatePicker SelectedDate="{Binding duedate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTextColumn x:Name="teacherIdColumn" Binding="{Binding teacherid}" Header="teacher Id" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="nameColumn" Binding="{Binding name}" Header="name" Width="SizeToHeader"/>
-            </DataGrid.Columns>
-        </DataGrid>
+        <DataGrid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
 
 
 
