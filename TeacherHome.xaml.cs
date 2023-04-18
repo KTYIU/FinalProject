@@ -36,6 +36,19 @@ namespace FinalProjectApp
             lg.Show();
         }
 
+        private void ToUpdatePage(object sender, RoutedEventArgs e)
+        {
+            UpdateAssignment u = new UpdateAssignment();
+            u.Show();
+        }
+
+        private void ToAssign(object sender, RoutedEventArgs e)
+        {
+            AssignPage ap = new AssignPage();
+            ap.Show();
+        }
+
+
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
 
