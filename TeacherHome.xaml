@@ -10,12 +10,12 @@
         <local:FinalProjectDataSet x:Key="finalProjectDataSet"/>
         <CollectionViewSource x:Key="assignmentsViewSource" Source="{Binding Assignments, Source={StaticResource finalProjectDataSet}}"/>
     </Window.Resources> -->
-    <Grid DataContext="{StaticResource assignmentsViewSource}">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="778*"/>
             <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
-        <Image Source="C:\Users\katya\Downloads\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55" Margin="-798.334,-252.778,783,252.778"/>
+        <Image Source="C:\Users\katya\Downloads\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55" Margin="0,0,-0.001,0" Grid.ColumnSpan="2"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="80" Stroke="Black" VerticalAlignment="Top" Width="793" Opacity="0.8" Grid.ColumnSpan="2">
             <Rectangle.Effect>
                 <BlurEffect/>
@@ -23,19 +23,13 @@
         </Rectangle>
         <Button x:Name="ToLogIn" Content="Log Out" Background="AliceBlue" HorizontalAlignment="Left" Margin="27,27,0,0" VerticalAlignment="Top" Width="117" Height="37" Click="BToLogIn" FontSize="18"/>
         <Button x:Name="CreateClrmB" Content="Create Assignment" Background="AliceBlue" HorizontalAlignment="Left" Margin="437,27,0,0" VerticalAlignment="Top" Width="167" Height="37" Click="Button_Click" FontSize="18"/>
-        <TextBlock HorizontalAlignment="Center" Margin="609,109,67,270.667" TextWrapping="Wrap" Text="Classes:" VerticalAlignment="Center" Height="41" Width="102" FontSize="25" FontFamily="Segoe UI Semibold" TextAlignment="Center">
-            <TextBlock.Effect>
-                <DropShadowEffect Color="#FFF6E8DC" Direction="299" BlurRadius="0" ShadowDepth="3"/>
-            </TextBlock.Effect>
-        </TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="58,101,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="298" FontSize="25" FontFamily="Segoe UI Semibold">
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2" Color="#FFF1EDE8"/>
             </TextBlock.Effect><Run Text="Assignments"/><Run Text=" Timetable"/><Run Text=":"/></TextBlock>
         <Button x:Name="DeleteB" Content="Delete Assignment" Background="AliceBlue" HorizontalAlignment="Left" Margin="609,27,0,0" VerticalAlignment="Top" Width="159" Height="37" Click="Button_Click" FontSize="18"/>
         <Button x:Name="ToIDPage" Content="Update Assignment" Background="AliceBlue" HorizontalAlignment="Left" Margin="266,27,0,0" VerticalAlignment="Top" Width="166" Height="37" Click="Button_Click" FontSize="18"/>
-        <Button x:Name="ToIDPage_Copy" Content="Create Class" Background="AliceBlue" HorizontalAlignment="Left" Margin="641,353,0,0" VerticalAlignment="Top" Width="127" Height="37" Click="Button_Click" FontSize="18"/>
-        <DataGrid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+        <DataGrid x:Name="Grid1" HorizontalAlignment="Left" Height="215" Margin="58,160,0,0" VerticalAlignment="Top" Width="261"/>
 
 
 

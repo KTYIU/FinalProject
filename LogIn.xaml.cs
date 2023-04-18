@@ -61,7 +61,7 @@ namespace FinalProjectApp
         }
 
 
-        private void ToSignUp(object sender, RoutedEventArgs e)
+        private void GoToSignUp(object sender, RoutedEventArgs e)
         {
             Close();
             SignUp su = new SignUp();

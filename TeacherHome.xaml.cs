@@ -1,5 +1,8 @@
-﻿using System;
+﻿using NLog.Internal;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +26,7 @@ namespace FinalProjectApp
         public TeacherHome()
         {
             InitializeComponent();
+            Fill_Grid();
         }
 
         private void BToLogIn(object sender, RoutedEventArgs e)
@@ -30,11 +34,6 @@ namespace FinalProjectApp
             Close();
             LogIn lg = new LogIn();
             lg.Show();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
@@ -46,6 +45,33 @@ namespace FinalProjectApp
             finalProjectDataSetAssignmentsTableAdapter.Fill(finalProjectDataSet.Assignments);
             System.Windows.Data.CollectionViewSource assignmentsViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("assignmentsViewSource")));
             assignmentsViewSource.View.MoveCurrentToFirst();
+        }
+
+        private void Fill_Grid()
+        {
+            string dbsCon = @"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = FinalProjectDataSet; Integrated Security = True";
+            SqlConnection sqlCon = new SqlConnection(dbsCon);
+
+            try
+            {
+
+                string CmdString = "SELECT * FROM Assignments";
+
+                SqlCommand cmd = new SqlCommand(CmdString, sqlCon);
+
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable("Assignments");
+
+                sda.Fill(dt);
+
+                Grid1.ItemsSource = dt.DefaultView;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

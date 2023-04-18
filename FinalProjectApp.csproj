@@ -35,8 +35,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>packages\NLog.5.1.3\lib\net46\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Data" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -92,6 +97,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FinalProjectDataSetDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FinalProjectDataSetDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalProjectDataSetDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="UpdateTask.xaml.cs">
       <DependentUpon>UpdateTask.xaml</DependentUpon>
@@ -153,6 +163,18 @@
     <None Include="FinalProjectDataSetDataSet.xss">
       <DependentUpon>FinalProjectDataSetDataSet.xsd</DependentUpon>
     </None>
+    <None Include="FinalProjectDataSetDataSet1.xsc">
+      <DependentUpon>FinalProjectDataSetDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FinalProjectDataSetDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalProjectDataSetDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalProjectDataSetDataSet1.xss">
+      <DependentUpon>FinalProjectDataSetDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
