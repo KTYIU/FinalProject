@@ -6,11 +6,15 @@
         xmlns:local="clr-namespace:FinalProjectApp"
         mc:Ignorable="d"
         Title="AdminTeacherHome" Height="450" Width="800" Loaded="Window_Loaded_1">
+    <Window.Resources>
+        <local:FinalProjectDataSet x:Key="finalProjectDataSet"/>
+        <CollectionViewSource x:Key="assignmentsViewSource" Source="{Binding Assignments, Source={StaticResource finalProjectDataSet}}"/>
+    </Window.Resources>
     <!-- <Window.Resources>
         <local:FinalProjectDataSet x:Key="finalProjectDataSet"/>
         <CollectionViewSource x:Key="assignmentsViewSource" Source="{Binding Assignments, Source={StaticResource finalProjectDataSet}}"/>
     </Window.Resources> -->
-    <Grid>
+    <Grid DataContext="{StaticResource assignmentsViewSource}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="778*"/>
             <ColumnDefinition Width="15*"/>
@@ -27,9 +31,9 @@
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2" Color="#FFF1EDE8"/>
             </TextBlock.Effect><Run Text="Assignments"/><Run Text=" Timetable"/><Run Text=":"/></TextBlock>
-        <Button x:Name="DeleteB" Content="Delete Assignment" Background="AliceBlue" HorizontalAlignment="Left" Margin="609,27,0,0" VerticalAlignment="Top" Width="159" Height="37" Click="Button_Click" FontSize="18"/>
+        <Button x:Name="DeleteB" Content="Delete Assignment" Background="AliceBlue" HorizontalAlignment="Left" Margin="609,27,0,0" VerticalAlignment="Top" Width="159" Height="37" Click="ToDelete" FontSize="18"/>
         <Button x:Name="Update" Content="Update Assignment" Background="AliceBlue" HorizontalAlignment="Left" Margin="266,27,0,0" VerticalAlignment="Top" Width="166" Height="37" Click="ToUpdatePage" FontSize="18"/>
-        <DataGrid x:Name="Grid1" HorizontalAlignment="Left" Height="215" Margin="58,160,0,0" VerticalAlignment="Top" Width="261"/>
+        <DataGrid x:Name="Grid1" HorizontalAlignment="Left" Height="215" Margin="58,160,0,0" VerticalAlignment="Top" Width="261" ItemsSource="{Binding}"/>
 
 
 

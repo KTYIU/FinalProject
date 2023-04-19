@@ -48,10 +48,14 @@ namespace FinalProjectApp
             ap.Show();
         }
 
+        private void ToDelete(object sender, RoutedEventArgs e)
+        {
+            DeletePage ap = new DeletePage();
+            ap.Show();
+        }
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
-
             FinalProjectApp.FinalProjectDataSet finalProjectDataSet = ((FinalProjectApp.FinalProjectDataSet)(this.FindResource("finalProjectDataSet")));
             // Load data into the table Assignments. You can modify this code as needed.
             FinalProjectApp.FinalProjectDataSetTableAdapters.AssignmentsTableAdapter finalProjectDataSetAssignmentsTableAdapter = new FinalProjectApp.FinalProjectDataSetTableAdapters.AssignmentsTableAdapter();

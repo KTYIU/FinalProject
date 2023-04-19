@@ -60,6 +60,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="DeletePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="UpdateTask.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -102,6 +106,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FinalProjectDataSetDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DeletePage.xaml.cs">
+      <DependentUpon>DeletePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UpdateTask.xaml.cs">
       <DependentUpon>UpdateTask.xaml</DependentUpon>
