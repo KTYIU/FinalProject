@@ -9,9 +9,11 @@
     <Window.Resources>
         <local:FinalProjDataSet x:Key="finalProjDataSet"/>
         <CollectionViewSource x:Key="classesViewSource" Source="{Binding Classes, Source={StaticResource finalProjDataSet}}"/>
+        <local:FinalProjDataSet1 x:Key="finalProjDataSet1"/>
+        <CollectionViewSource x:Key="classesViewSource1" Source="{Binding Classes, Source={StaticResource finalProjDataSet1}}"/>
     </Window.Resources>
-    <Grid>
-        <Image Source="H:\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55" Margin="0,-0.916,0,0.916"/>
+    <Grid DataContext="{StaticResource classesViewSource1}">
+        <Image Source="H:\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55" Margin="-0.001,0,0,0"/>
         <Button Content="Enter" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="343,327,0,0" VerticalAlignment="Top" Width="117" Height="37" Click="Button_Click" FontSize="18"/>
         <Button x:Name="ToHome" Content="Cancel" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="663,371,0,0" VerticalAlignment="Top" Width="104" Height="30" Click="Cancel" FontSize="18"/>
         <TextBlock HorizontalAlignment="Center" Margin="270,75,260.333,304.667" TextWrapping="Wrap" VerticalAlignment="Center" Height="41" Width="263" FontSize="27" FontWeight="Bold" FontFamily="Palatino Linotype" TextAlignment="Center">
@@ -29,7 +31,7 @@
             <ComboBoxItem Content="French"/>
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="265,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="55"><Run FontSize="15" FontFamily="Segoe UI Semibold" Text="Subject"/><Run Text=":"/></TextBlock>
-        <TextBlock HorizontalAlignment="Left" Margin="266,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="55"><Run FontSize="15" FontFamily="Segoe UI Semibold" Text="Class:"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="280,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="55"><Run FontSize="15" FontFamily="Segoe UI Semibold" Text="Class:"/></TextBlock>
         <Grid x:Name="grid1" DataContext="{StaticResource classesViewSource}" HorizontalAlignment="Left" Margin="325,282,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -38,6 +40,22 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
+        </Grid>
+        <Grid x:Name="grid2" HorizontalAlignment="Left" Margin="340,282,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="idComboBox" Grid.Column="1" DisplayMemberPath="id" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="0,0,0,6" Grid.Row="0" VerticalAlignment="Center" Width="120">
+                <ComboBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel/>
+                    </ItemsPanelTemplate>
+                </ComboBox.ItemsPanel>
+            </ComboBox>
         </Grid>
 
         <!-- Note to self: Add ComboBox with classes later -->

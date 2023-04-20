@@ -41,11 +41,12 @@ namespace FinalProjectApp
             {
                 sqlCon.Open();
                 string q = "Insert into Assignments " +
-                    " Values(@val1,@val2,@val3)";
+                    " Values(@val1,@val2,@val3, @val4)";
                 SqlCommand cmd = new SqlCommand(q, sqlCon);
-                cmd.Parameters.AddWithValue("@val1", name.Text);
-                cmd.Parameters.AddWithValue("@val2", dueDater.SelectedDate);
-                cmd.Parameters.AddWithValue("@val2", cboxSubj.SelectedItem);
+                cmd.Parameters.AddWithValue("@val2", name.Text);
+                cmd.Parameters.AddWithValue("@val4", dueDater.SelectedDate);
+                cmd.Parameters.AddWithValue("@val3", idComboBox.SelectedItem);
+                cmd.Parameters.AddWithValue("@val1", cboxSubj.SelectedItem);
 
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
@@ -67,12 +68,12 @@ namespace FinalProjectApp
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
-            FinalProjectApp.FinalProjDataSet finalProjDataSet = ((FinalProjectApp.FinalProjDataSet)(this.FindResource("finalProjDataSet")));
+            FinalProjectApp.FinalProjDataSet1 finalProjDataSet1 = ((FinalProjectApp.FinalProjDataSet1)(this.FindResource("finalProjDataSet1")));
             // Load data into the table Classes. You can modify this code as needed.
-            FinalProjectApp.FinalProjDataSetTableAdapters.ClassesTableAdapter finalProjDataSetClassesTableAdapter = new FinalProjectApp.FinalProjDataSetTableAdapters.ClassesTableAdapter();
-            finalProjDataSetClassesTableAdapter.Fill(finalProjDataSet.Classes);
-            System.Windows.Data.CollectionViewSource classesViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("classesViewSource")));
-            classesViewSource.View.MoveCurrentToFirst();
+            FinalProjectApp.FinalProjDataSet1TableAdapters.ClassesTableAdapter finalProjDataSet1ClassesTableAdapter = new FinalProjectApp.FinalProjDataSet1TableAdapters.ClassesTableAdapter();
+            finalProjDataSet1ClassesTableAdapter.Fill(finalProjDataSet1.Classes);
+            System.Windows.Data.CollectionViewSource classesViewSource1 = ((System.Windows.Data.CollectionViewSource)(this.FindResource("classesViewSource1")));
+            classesViewSource1.View.MoveCurrentToFirst();
         }
     }
 }
