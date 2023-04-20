@@ -29,7 +29,7 @@ namespace FinalProjectApp
         private void Login(object sender, RoutedEventArgs e)
         {
 
-            string dbsCon = @"Data Source=localhost\SQLEXPRESS; Initial Catalog=FinalProjectDataSet; Integrated Security=True";
+            string dbsCon = @"Data Source=LABSCIFIPC16\LOCALHOST;Initial Catalog=FinalProj;Integrated Security=True";
             SqlConnection sqlCon = new SqlConnection(dbsCon);
 
             try

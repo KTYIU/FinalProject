@@ -29,13 +29,13 @@
             </TextBlock.Effect><Run Text="Assignments"/><Run Text=" Timetable"/><Run Text=":"/></TextBlock>
         <Button x:Name="DeleteB" Content="Delete Assignment" Background="AliceBlue" HorizontalAlignment="Left" Margin="609,27,0,0" VerticalAlignment="Top" Width="159" Height="37" Click="ToDelete" FontSize="18"/>
         <Button x:Name="Update" Content="Update Assignment" Background="AliceBlue" HorizontalAlignment="Left" Margin="266,27,0,0" VerticalAlignment="Top" Width="166" Height="37" Click="ToUpdatePage" FontSize="18"/>
-        <DataGrid x:Name="assignmentsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource assignmentsViewSource1}}" Margin="69,150,472,70.667" RowDetailsVisibilityMode="VisibleWhenSelected">
+        <DataGrid x:Name="assignmentsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource assignmentsViewSource1}}" Margin="58,159,242,61.667" RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="idColumn" Binding="{Binding id}" Header="id" IsReadOnly="True" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="subjectColumn" Binding="{Binding subject}" Header="subject" Width="SizeToHeader"/>
-                <DataGridTextColumn x:Name="_nameColumn" Binding="{Binding _name}" Header="name" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="idColumn" Binding="{Binding id}" Header="id" IsReadOnly="True" Width="20"/>
+                <DataGridTextColumn x:Name="subjectColumn" Binding="{Binding subject}" Header="subject" Width="100"/>
+                <DataGridTextColumn x:Name="_nameColumn" Binding="{Binding _name}" Header="name" Width="150"/>
                 <DataGridTextColumn x:Name="classIDColumn" Binding="{Binding classID}" Header="class ID" Width="SizeToHeader"/>
-                <DataGridTemplateColumn x:Name="dueDateColumn" Header="due Date" Width="SizeToHeader">
+                <DataGridTemplateColumn x:Name="dueDateColumn" Header="due Date" Width="150">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <DatePicker SelectedDate="{Binding dueDate, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>

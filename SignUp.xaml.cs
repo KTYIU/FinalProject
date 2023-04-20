@@ -28,7 +28,7 @@ namespace FinalProjectApp
 
         private void CreateAccount(object sender, RoutedEventArgs e)
         {
-            string dbsCon = @"Data Source=/.; Initial Catalog=FinalProjectDataSet; Integrated Security=True";
+            string dbsCon = @"Data Source=LABSCIFIPC16\LOCALHOST;Initial Catalog=FinalProj;Integrated Security=True";
             SqlConnection sqlCon = new SqlConnection(dbsCon);
 
             try

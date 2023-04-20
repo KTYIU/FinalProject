@@ -26,7 +26,7 @@ namespace FinalProjectApp
         public TeacherHome()
         {
             InitializeComponent();
-            Fill_Grid();
+            //Fill_Grid();
         }
 
         private void BToLogIn(object sender, RoutedEventArgs e)
@@ -64,9 +64,10 @@ namespace FinalProjectApp
             System.Windows.Data.CollectionViewSource assignmentsViewSource1 = ((System.Windows.Data.CollectionViewSource)(this.FindResource("assignmentsViewSource1")));
             assignmentsViewSource1.View.MoveCurrentToFirst();
         }
+        /*
         private void Fill_Grid()
         {
-            string dbsCon = @"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = FinalProjectDataSet; Integrated Security = True";
+            string dbsCon = @"Data Source=LABSCIFIPC16\LOCALHOST;Initial Catalog=FinalProj;Integrated Security=True";
             SqlConnection sqlCon = new SqlConnection(dbsCon);
 
             try
@@ -90,5 +91,6 @@ namespace FinalProjectApp
             }
 
         }
+        */
     }
 }
