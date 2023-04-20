@@ -72,10 +72,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="HomeStudent.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="AssignPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -92,32 +88,24 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="FinalProjectDataSet.Designer.cs">
+    <Compile Include="FinalProjDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>FinalProjectDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="FinalProjectDataSetDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FinalProjectDataSetDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="FinalProjectDataSetDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FinalProjectDataSetDataSet1.xsd</DependentUpon>
+      <DependentUpon>FinalProjDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="DeletePage.xaml.cs">
       <DependentUpon>DeletePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="UpdateTask.xaml.cs">
       <DependentUpon>UpdateTask.xaml</DependentUpon>
     </Compile>
     <Compile Include="TeacherHome.xaml.cs">
       <DependentUpon>TeacherHome.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="HomeStudent.xaml.cs">
-      <DependentUpon>HomeStudent.xaml</DependentUpon>
     </Compile>
     <Compile Include="AssignPage.xaml.cs">
       <DependentUpon>AssignPage.xaml</DependentUpon>
@@ -139,47 +127,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="FinalProjectDataSet.xsc">
-      <DependentUpon>FinalProjectDataSet.xsd</DependentUpon>
+    <None Include="FinalProjDataSet.xsc">
+      <DependentUpon>FinalProjDataSet.xsd</DependentUpon>
     </None>
-    <None Include="FinalProjectDataSet.xsd">
+    <None Include="FinalProjDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FinalProjectDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>FinalProjDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="FinalProjectDataSet.xss">
-      <DependentUpon>FinalProjectDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FinalProjectDataSetDataSet.xsc">
-      <DependentUpon>FinalProjectDataSetDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FinalProjectDataSetDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FinalProjectDataSetDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FinalProjectDataSetDataSet.xss">
-      <DependentUpon>FinalProjectDataSetDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FinalProjectDataSetDataSet1.xsc">
-      <DependentUpon>FinalProjectDataSetDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="FinalProjectDataSetDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FinalProjectDataSetDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FinalProjectDataSetDataSet1.xss">
-      <DependentUpon>FinalProjectDataSetDataSet1.xsd</DependentUpon>
+    <None Include="FinalProjDataSet.xss">
+      <DependentUpon>FinalProjDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

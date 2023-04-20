@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="LogIn" Height="450" Width="800">
     <Grid>
-        <Image Source="C:\Users\katya\Downloads\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55"/>
+        <Image Source="H:\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55"/>
         <Button x:Name="logInButton" Content="Enter" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="346,330,0,0" VerticalAlignment="Top" Width="117" Height="37" Click="Login" FontSize="18"/>
         <Button x:Name="SignUp" Background="BlanchedAlmond" Content="Sign-up" HorizontalAlignment="Left" Margin="663,371,0,0" VerticalAlignment="Top" Width="104" Height="30" Click="GoToSignUp" FontSize="18"/>
         <TextBlock HorizontalAlignment="Center" Margin="349,102,342.333,277.667" TextWrapping="Wrap" Text="Log In" VerticalAlignment="Center" Height="41" Width="102" FontSize="27" FontWeight="Bold" FontFamily="Palatino Linotype" TextAlignment="Center">

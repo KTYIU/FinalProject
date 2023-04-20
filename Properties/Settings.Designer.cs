@@ -26,11 +26,11 @@ namespace FinalProjectApp.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost\\SQLEXPRESS;Initial Catalog=FinalProject;Integrated Security" +
-            "=True")]
-        public string FinalProjectConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LABSCIFIPC16\\LOCALHOST;Initial Catalog=FinalProj;Integrated Security=" +
+            "True")]
+        public string FinalProjConnectionString {
             get {
-                return ((string)(this["FinalProjectConnectionString"]));
+                return ((string)(this["FinalProjConnectionString"]));
             }
         }
     }

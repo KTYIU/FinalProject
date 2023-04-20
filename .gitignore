@@ -6,3 +6,5 @@
 *.sqlite
 *.cache
 /obj
+*.json
+/packages/NLog.5.1.3

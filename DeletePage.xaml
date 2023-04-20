@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="UpdateAssignment" Height="450" Width="800">
     <Grid>
-        <Image Source="C:\Users\katya\Downloads\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55"/>
+        <Image Source="H:\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55"/>
         <Button Content="Enter" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="343,327,0,0" VerticalAlignment="Top" Width="117" Height="37" Click="Button_Click" FontSize="18"/>
         <Button x:Name="ToHome" Content="Cancel" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="663,371,0,0" VerticalAlignment="Top" Width="104" Height="30" Click="Cancel" FontSize="18"/>
         <TextBlock HorizontalAlignment="Center" Margin="266,55,264.333,324.667" TextWrapping="Wrap" VerticalAlignment="Center" Height="41" Width="263" FontSize="27" FontWeight="Bold" FontFamily="Palatino Linotype" TextAlignment="Center">

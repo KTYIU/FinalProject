@@ -56,14 +56,14 @@ namespace FinalProjectApp
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)
         {
-            FinalProjectApp.FinalProjectDataSet finalProjectDataSet = ((FinalProjectApp.FinalProjectDataSet)(this.FindResource("finalProjectDataSet")));
-            // Load data into the table Assignments. You can modify this code as needed.
-            FinalProjectApp.FinalProjectDataSetTableAdapters.AssignmentsTableAdapter finalProjectDataSetAssignmentsTableAdapter = new FinalProjectApp.FinalProjectDataSetTableAdapters.AssignmentsTableAdapter();
-            finalProjectDataSetAssignmentsTableAdapter.Fill(finalProjectDataSet.Assignments);
-            System.Windows.Data.CollectionViewSource assignmentsViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("assignmentsViewSource")));
-            assignmentsViewSource.View.MoveCurrentToFirst();
-        }
 
+            FinalProjectApp.FinalProjDataSet finalProjDataSet = ((FinalProjectApp.FinalProjDataSet)(this.FindResource("finalProjDataSet")));
+            // Load data into the table Assignments. You can modify this code as needed.
+            FinalProjectApp.FinalProjDataSetTableAdapters.AssignmentsTableAdapter finalProjDataSetAssignmentsTableAdapter = new FinalProjectApp.FinalProjDataSetTableAdapters.AssignmentsTableAdapter();
+            finalProjDataSetAssignmentsTableAdapter.Fill(finalProjDataSet.Assignments);
+            System.Windows.Data.CollectionViewSource assignmentsViewSource1 = ((System.Windows.Data.CollectionViewSource)(this.FindResource("assignmentsViewSource1")));
+            assignmentsViewSource1.View.MoveCurrentToFirst();
+        }
         private void Fill_Grid()
         {
             string dbsCon = @"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = FinalProjectDataSet; Integrated Security = True";
@@ -82,7 +82,7 @@ namespace FinalProjectApp
 
                 sda.Fill(dt);
 
-                Grid1.ItemsSource = dt.DefaultView;
+                //Grid1.ItemsSource = dt.DefaultView;
             }
             catch (Exception ex)
             {
