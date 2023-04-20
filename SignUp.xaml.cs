@@ -43,10 +43,11 @@ namespace FinalProjectApp
                     MessageBox.Show("Make sure your Password in both places matches.");
                 }
 
-                string q = "Update Teachers SET email=@val1 AND password=PASSWORD(@val2)";
+                string q = "Insert into Teachers values(@val1,@val2,@val3)";
                 SqlCommand cmd = new SqlCommand(q, sqlCon);
-                cmd.Parameters.AddWithValue("@val1", email1.Text);
-                cmd.Parameters.AddWithValue("@val2", pass.Password);        //string query = $"select [Username], [Password] from Teachers where [email]={email.Text} and [Password]={pass.Password}";
+                cmd.Parameters.AddWithValue("@val1", name.Text);
+                cmd.Parameters.AddWithValue("@val2", email1.Text);
+                cmd.Parameters.AddWithValue("@val3", pass.Password);        //string query = $"select [Username], [Password] from Teachers where [email]={email.Text} and [Password]={pass.Password}";
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();
 
