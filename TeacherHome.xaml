@@ -15,7 +15,7 @@
             <ColumnDefinition Width="778*"/>
             <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
-        <Image Source="H:\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55" Margin="-0.334,0.001,0.333,0" Grid.ColumnSpan="2"/>
+        <Image Source="H:\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55" Margin="0,0.001,-0.002,0" Grid.ColumnSpan="2"/>
         <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="80" Stroke="Black" VerticalAlignment="Top" Width="793" Opacity="0.8" Grid.ColumnSpan="2">
             <Rectangle.Effect>
                 <BlurEffect/>
@@ -31,7 +31,7 @@
         <Button x:Name="Update" Content="Update Assignment" Background="AliceBlue" HorizontalAlignment="Left" Margin="266,27,0,0" VerticalAlignment="Top" Width="166" Height="37" Click="ToUpdatePage" FontSize="18"/>
         <DataGrid x:Name="assignmentsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource assignmentsViewSource1}}" Margin="58,159,242,61.667" RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="idColumn" Binding="{Binding id}" Header="id" IsReadOnly="True" Width="20"/>
+                <DataGridTextColumn x:Name="idColumn" Binding="{Binding id}" Header="id" IsReadOnly="True" Width="10"/>
                 <DataGridTextColumn x:Name="subjectColumn" Binding="{Binding subject}" Header="subject" Width="100"/>
                 <DataGridTextColumn x:Name="_nameColumn" Binding="{Binding _name}" Header="name" Width="150"/>
                 <DataGridTextColumn x:Name="classIDColumn" Binding="{Binding classID}" Header="class ID" Width="SizeToHeader"/>

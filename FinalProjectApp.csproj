@@ -96,6 +96,11 @@
     <Compile Include="DeletePage.xaml.cs">
       <DependentUpon>DeletePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FinalProjDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FinalProjDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -141,6 +146,17 @@
     </None>
     <None Include="FinalProjDataSet.xss">
       <DependentUpon>FinalProjDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FinalProjDataSet1.xsc">
+      <DependentUpon>FinalProjDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="FinalProjDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FinalProjDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FinalProjDataSet1.xss">
+      <DependentUpon>FinalProjDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinalProjectApp"
         mc:Ignorable="d"
-        Title="Assign" Height="450" Width="800">
+        Title="Assign" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:FinalProjDataSet x:Key="finalProjDataSet"/>
+        <CollectionViewSource x:Key="classesViewSource" Source="{Binding Classes, Source={StaticResource finalProjDataSet}}"/>
+    </Window.Resources>
     <Grid>
-        <Image Source="H:\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55" Margin="0,-0.159,0,0.159"/>
+        <Image Source="H:\Online-Learning.jpg" Stretch="UniformToFill" UseLayoutRounding="False" Opacity="0.55" Margin="0,-0.916,0,0.916"/>
         <Button Content="Enter" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="343,327,0,0" VerticalAlignment="Top" Width="117" Height="37" Click="Button_Click" FontSize="18"/>
         <Button x:Name="ToHome" Content="Cancel" Background="BlanchedAlmond" HorizontalAlignment="Left" Margin="663,371,0,0" VerticalAlignment="Top" Width="104" Height="30" Click="Cancel" FontSize="18"/>
         <TextBlock HorizontalAlignment="Center" Margin="270,75,260.333,304.667" TextWrapping="Wrap" VerticalAlignment="Center" Height="41" Width="263" FontSize="27" FontWeight="Bold" FontFamily="Palatino Linotype" TextAlignment="Center">
@@ -26,13 +30,15 @@
         </ComboBox>
         <TextBlock HorizontalAlignment="Left" Margin="265,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="55"><Run FontSize="15" FontFamily="Segoe UI Semibold" Text="Subject"/><Run Text=":"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="266,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="55"><Run FontSize="15" FontFamily="Segoe UI Semibold" Text="Class:"/></TextBlock>
-        <ComboBox x:Name="classesComboBox" DisplayMemberPath="nameCl" ItemsSource="{Binding}" Margin="334,283,313.333,114.667" SelectedValuePath="id">
-            <ComboBox.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <VirtualizingStackPanel/>
-                </ItemsPanelTemplate>
-            </ComboBox.ItemsPanel>
-        </ComboBox>
+        <Grid x:Name="grid1" DataContext="{StaticResource classesViewSource}" HorizontalAlignment="Left" Margin="325,282,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
 
         <!-- Note to self: Add ComboBox with classes later -->
 

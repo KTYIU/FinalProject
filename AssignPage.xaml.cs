@@ -63,5 +63,16 @@ namespace FinalProjectApp
                 Close();
             }
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            FinalProjectApp.FinalProjDataSet finalProjDataSet = ((FinalProjectApp.FinalProjDataSet)(this.FindResource("finalProjDataSet")));
+            // Load data into the table Classes. You can modify this code as needed.
+            FinalProjectApp.FinalProjDataSetTableAdapters.ClassesTableAdapter finalProjDataSetClassesTableAdapter = new FinalProjectApp.FinalProjDataSetTableAdapters.ClassesTableAdapter();
+            finalProjDataSetClassesTableAdapter.Fill(finalProjDataSet.Classes);
+            System.Windows.Data.CollectionViewSource classesViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("classesViewSource")));
+            classesViewSource.View.MoveCurrentToFirst();
+        }
     }
 }

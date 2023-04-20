@@ -16,9 +16,9 @@
             </TextBlock.Effect>
         </TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="84" Width="773" TextAlignment="Center" FontWeight="Bold" FontFamily="MV Boli" FontSize="28" LineHeight="40" LineStackingStrategy="BlockLineHeight"><Run Text="Welcome to "/><Run Text="OPA "/><Run Text="- our Online "/><Run Text="Platform for Assignments"/><Run Text="!"/></TextBlock>
-        <TextBox x:Name="email" HorizontalAlignment="Left" Height="32" Margin="308,191,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="195" FontSize="15" FontFamily="Sitka Small"/>
-        <PasswordBox x:Name="pass"   HorizontalAlignment="Left"  Margin="308,261,0,0" VerticalAlignment="Top" Height="32" Width="195"/>
-        <TextBlock HorizontalAlignment="Left" Margin="308,242,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Height="27" Width="82" FontSize="15" FontFamily="Sitka Small">
+        <TextBox x:Name="email" HorizontalAlignment="Left" Height="32" Margin="263,188,0,0" TextWrapping="Wrap" Text="Email" VerticalAlignment="Top" Width="283" FontSize="15" FontFamily="Sitka Small"/>
+        <PasswordBox x:Name="pass"   HorizontalAlignment="Left"  Margin="263,261,0,0" VerticalAlignment="Top" Height="32" Width="283"/>
+        <TextBlock HorizontalAlignment="Left" Margin="263,240,0,0" TextWrapping="Wrap" Text="Password:" VerticalAlignment="Top" Height="27" Width="82" FontSize="15" FontFamily="Sitka Small">
             <TextBlock.Effect>
                 <DropShadowEffect BlurRadius="2" ShadowDepth="2
                                   " Color="#FFF1EDE8"/>

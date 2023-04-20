@@ -32,7 +32,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="266,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="55"><Run FontSize="15" FontFamily="Segoe UI Semibold" Text="Subject"/><Run Text=":"/></TextBlock>
         <TextBox x:Name="idBox" HorizontalAlignment="Left" Height="31" Margin="307,108,0,0" TextWrapping="Wrap" Text="ID" VerticalAlignment="Top" Width="202" FontSize="15"/>
         <TextBlock HorizontalAlignment="Left" Margin="266,283,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="31" Width="55"><Run FontSize="15" FontFamily="Segoe UI Semibold" Text="Class:"/></TextBlock>
-        <ComboBox x:Name="classesComboBox" DisplayMemberPath="nameCl" ItemsSource="{Binding}" Margin="334,283,313.333,114.667" SelectedValuePath="id">
+        <ComboBox x:Name="classesComboBox" DisplayMemberPath="nameCl" ItemsSource="{Binding}" Margin="334,283,314.333,106.667" SelectedValuePath="id">
             <ComboBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel/>
