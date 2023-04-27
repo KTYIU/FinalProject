@@ -68,9 +68,10 @@ namespace FinalProjectApp
 
         private void GoToLogIn(object sender, RoutedEventArgs e)
         {
-            Close();
             LogIn lg = new LogIn();
             lg.Show();
+            Close();
+            
         }
     }
 }
