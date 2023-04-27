@@ -28,6 +28,8 @@ namespace FinalProjectApp
 
         private void Cancel(object sender, RoutedEventArgs e)
         {
+            TeacherHome th = new TeacherHome();
+            th.Show();
             Close();
         }
 
@@ -36,32 +38,36 @@ namespace FinalProjectApp
             string dbsCon = @"Data Source=LABSCIFIPC16\LOCALHOST;Initial Catalog=FinalProj;Integrated Security=True";
             SqlConnection sqlCon = new SqlConnection(dbsCon);
 
-            try
+            using (sqlCon)
             {
-                sqlCon.Open();
-                string q = "Update Assignments SET _name=@val1, dueDate=@val2, subject=@val3, classID=@val4) " +
-                    "where id=@val"; 
+
+                string q = "Update Assignments SET _name=@val1, dueDate=@val2, subject=@val3, classID=@val4 " +
+                    "where id=@val;";
                 SqlCommand cmd = new SqlCommand(q, sqlCon);
                 cmd.Parameters.AddWithValue("@val", idBox.Text);
                 cmd.Parameters.AddWithValue("@val1", name.Text);
                 cmd.Parameters.AddWithValue("@val2", dueDater.Text);
                 cmd.Parameters.AddWithValue("@val3", cboxSubj.Text);
                 cmd.Parameters.AddWithValue("@val4", idComboBox.Text);
+                try
+                {
+                    sqlCon.Open();
+                    cmd.ExecuteNonQuery();
 
-                cmd.Prepare();
-                cmd.ExecuteNonQuery();
-
-                MessageBox.Show("Assignment updated successfully.");
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                sqlCon.Close();
-                Close();
+                    MessageBox.Show("Assignment updated successfully.");
+                    TeacherHome th = new TeacherHome();
+                    th.Show();
+                    Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    sqlCon.Close();
+                    Close();
+                }
             }
         }
 

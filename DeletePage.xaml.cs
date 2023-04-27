@@ -28,6 +28,8 @@ namespace FinalProjectApp
 
         private void Cancel(object sender, RoutedEventArgs e)
         {
+            TeacherHome th = new TeacherHome();
+            th.Show();
             Close();
         }
 
@@ -39,17 +41,18 @@ namespace FinalProjectApp
             try
             {
                 sqlCon.Open();
-                string q = "Update Assignments DELETE *" +
-                    "where id=@val"; 
+                string q = "DELETE from Assignments where id=@val"; 
                 // ^!!! add class (or remove it from DB)
                 SqlCommand cmd = new SqlCommand(q, sqlCon);
                 cmd.Parameters.AddWithValue("@val", idBox.Text);
 
-                cmd.Prepare();
+                //cmd.Prepare();
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Assignment updated successfully.");
-
+                MessageBox.Show("Assignment deleted.");
+                TeacherHome th = new TeacherHome();
+                th.Show();
+                Close();
             }
             catch (Exception ex)
             {

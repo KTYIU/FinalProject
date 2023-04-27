@@ -48,7 +48,7 @@ namespace FinalProjectApp
                 cmd.Parameters.AddWithValue("@val1", name.Text);
                 cmd.Parameters.AddWithValue("@val2", email1.Text);
                 cmd.Parameters.AddWithValue("@val3", pass.Password);        //string query = $"select [Username], [Password] from Teachers where [email]={email.Text} and [Password]={pass.Password}";
-                cmd.Prepare();
+                
                 cmd.ExecuteNonQuery();
 
                 MessageBox.Show("Welcome!");

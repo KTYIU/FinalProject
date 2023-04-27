@@ -40,18 +40,21 @@ namespace FinalProjectApp
         {
             UpdateAssignment u = new UpdateAssignment();
             u.Show();
+            Close();
         }
 
         private void ToAssign(object sender, RoutedEventArgs e)
         {
             AssignPage ap = new AssignPage();
             ap.Show();
+            Close();
         }
 
         private void ToDelete(object sender, RoutedEventArgs e)
         {
-            DeletePage ap = new DeletePage();
-            ap.Show();
+            DeletePage d = new DeletePage();
+            d.Show();
+            Close();
         }
 
         private void Window_Loaded_1(object sender, RoutedEventArgs e)

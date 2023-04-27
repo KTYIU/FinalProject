@@ -28,6 +28,8 @@ namespace FinalProjectApp
         
         private void Cancel(object sender, RoutedEventArgs e)
         {
+            TeacherHome th = new TeacherHome();
+            th.Show();
             Close();
         }
 
@@ -53,6 +55,9 @@ namespace FinalProjectApp
                     cmd.ExecuteNonQuery();
 
                     MessageBox.Show("Assignment created successfully.");
+                    TeacherHome th = new TeacherHome();
+                    th.Show();
+                    Close();
                 }
 
                 /*
