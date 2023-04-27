@@ -63,9 +63,10 @@ namespace FinalProjectApp
 
         private void GoToSignUp(object sender, RoutedEventArgs e)
         {
-            Close();
             SignUp su = new SignUp();
             su.Show();
+            Close();
+            
         }
     }
 }

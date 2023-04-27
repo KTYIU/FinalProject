@@ -36,32 +36,52 @@ namespace FinalProjectApp
         {
             string dbsCon = @"Data Source=LABSCIFIPC16\LOCALHOST;Initial Catalog=FinalProj;Integrated Security=True";
             SqlConnection sqlCon = new SqlConnection(dbsCon);
+            //string q = "Insert into Assignments Values(@val1,@val2,@val3, @val4)";
 
-            try
+            using (sqlCon)
             {
-                sqlCon.Open();
                 string q = "Insert into Assignments " +
                     " Values(@val1,@val2,@val3, @val4)";
                 SqlCommand cmd = new SqlCommand(q, sqlCon);
                 cmd.Parameters.AddWithValue("@val2", name.Text);
-                cmd.Parameters.AddWithValue("@val4", dueDater.SelectedDate);
-                cmd.Parameters.AddWithValue("@val3", idComboBox.SelectedItem);
-                cmd.Parameters.AddWithValue("@val1", cboxSubj.SelectedItem);
+                cmd.Parameters.AddWithValue("@val4", dueDater.Text);
+                cmd.Parameters.AddWithValue("@val3", idComboBox.Text);
+                cmd.Parameters.AddWithValue("@val1", cboxSubj.Text);
+                try
+                {
+                    sqlCon.Open();
+                    cmd.ExecuteNonQuery();
 
-                cmd.Prepare();
-                cmd.ExecuteNonQuery();
+                    MessageBox.Show("Assignment created successfully.");
+                }
 
-                MessageBox.Show("Assignment created successfully.");
+                /*
+                try
+                {
+                    sqlCon.Open();
+                    string q = "Insert into Assignments " +
+                        " Values(@val1,@val2,@val3, @val4)";
+                    SqlCommand cmd = new SqlCommand(q, sqlCon);
+                    cmd.Parameters.AddWithValue("@val2", name.Text);
+                    cmd.Parameters.AddWithValue("@val4", dueDater.SelectedDate);
+                    cmd.Parameters.AddWithValue("@val3", idComboBox.SelectedItem);
+                    cmd.Parameters.AddWithValue("@val1", cboxSubj.SelectedItem);
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                sqlCon.Close();
-                Close();
+                    //cmd.Prepare();
+                    cmd.ExecuteNonQuery();
+
+                    MessageBox.Show("Assignment created successfully.");
+
+                }*/
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    sqlCon.Close();
+                    Close();
+                }
             }
         }
 

@@ -44,9 +44,9 @@ namespace FinalProjectApp
                 SqlCommand cmd = new SqlCommand(q, sqlCon);
                 cmd.Parameters.AddWithValue("@val", idBox.Text);
                 cmd.Parameters.AddWithValue("@val1", name.Text);
-                cmd.Parameters.AddWithValue("@val2", dueDater.SelectedDate);
-                cmd.Parameters.AddWithValue("@val3", cboxSubj.SelectedItem);
-                cmd.Parameters.AddWithValue("@val4", idComboBox.SelectedItem);
+                cmd.Parameters.AddWithValue("@val2", dueDater.Text);
+                cmd.Parameters.AddWithValue("@val3", cboxSubj.Text);
+                cmd.Parameters.AddWithValue("@val4", idComboBox.Text);
 
                 cmd.Prepare();
                 cmd.ExecuteNonQuery();

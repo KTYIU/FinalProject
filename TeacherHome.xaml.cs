@@ -31,9 +31,9 @@ namespace FinalProjectApp
 
         private void BToLogIn(object sender, RoutedEventArgs e)
         {
-            Close();
             LogIn lg = new LogIn();
             lg.Show();
+            Close();
         }
 
         private void ToUpdatePage(object sender, RoutedEventArgs e)
